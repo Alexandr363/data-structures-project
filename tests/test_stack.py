@@ -1,10 +1,12 @@
 """Здесь надо написать тесты с использованием unittest для модуля stack."""
-import unittest
-from src.stack import Stack
-
-test = Stack()
+from src.stack import Node, Stack
 
 
-class TestStack(unittest.TestCase):
-    def test_push(self):
-        self.assertEqual(test.push(10), test.stack[0])
+def test_init_node():
+    node = Node('Тарелка', 15)
+    assert node.data == 'Тарелка'
+
+
+def test_init_stack():
+    stack = Stack()
+    assert stack.top is None

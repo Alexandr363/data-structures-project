@@ -18,7 +18,6 @@ class Stack:
         """
         Конструктор класса Stack
         """
-        self.stack = []
         self.top = None
 
     def push(self, data) -> None:
@@ -28,5 +27,3 @@ class Stack:
         next_node = self.top
         new_top = Node(data, next_node)
         self.top = new_top
-
-        self.stack.append(data)
